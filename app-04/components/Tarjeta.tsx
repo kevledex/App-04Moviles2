@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, Image, Modal, Button } from 'react-native'
 import React, { useState } from 'react'
 
 export default function Tarjeta(props: any) {
@@ -6,8 +6,7 @@ export default function Tarjeta(props: any) {
     const [ocultarModal, setocultarModal] = useState(false)
 
     return (
-        <TouchableOpacity
-            onPress={() => setocultarModal(!ocultarModal)}
+        <View
             style={styles.container}
         >
             <Image
@@ -26,7 +25,7 @@ export default function Tarjeta(props: any) {
                     Atributos: {props.datos.atributos.join(', ')}
                 </Text>
             </View>
-        </TouchableOpacity>
+        </View>
     )
 }
 
